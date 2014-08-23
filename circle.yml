@@ -10,4 +10,4 @@ test:
   override:
     - docker build -t utserver .
     - docker run -d -p 8080:8080 test; sleep 5
-    - curl --retry 10 --retry-delay 5 --user admin: http://localhost:8080/gui/
+    - "curl --retry 10 --retry-delay 5 --user admin: http://localhost:8080/gui/"
