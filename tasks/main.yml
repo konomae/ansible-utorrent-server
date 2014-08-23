@@ -1,0 +1,16 @@
+---
+# tasks file for utserver
+
+- apt: update_cache=yes cache_valid_time=3600
+  when: utserver_apt_update
+
+- apt: name={{ item }} state=present
+  with_items:
+    - libssl0.9.8
+    - libssl1.0.0
+
+- get_url: url={{ utserver_download_url }} dest={{ utserver_download_dest }}
+
+- unarchive: src={{ utserver_download_dest }} dest={{ utserver_install_dest }}
+
+- file: src={{ utserver_link_src }} dest={{ utserver_link_dest }} state=link

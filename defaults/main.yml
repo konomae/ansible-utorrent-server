@@ -1,0 +1,9 @@
+---
+# defaults file for utserver
+
+utserver_apt_update: no
+utserver_download_url: http://download-new.utorrent.com/endpoint/utserver/os/linux-x64-ubuntu-13-04/track/beta/
+utserver_download_dest: /opt/utserver.tar.gz
+utserver_install_dest: /opt
+utserver_link_src: /opt/utorrent-server-alpha-v3_3
+utserver_link_dest: /opt/utorrent-server
