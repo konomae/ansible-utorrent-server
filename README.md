@@ -8,6 +8,14 @@ By default, this will install to `/opt/utorrent-server/`.
 [![Circle CI](https://circleci.com/gh/konomae/ansible-utorrent-server.png?style=badge)](https://circleci.com/gh/konomae/ansible-utorrent-server)
 
 
+How To Install
+--------------
+
+```bash
+$ ansible-galaxy install konomae.utserver
+```
+
+
 Role Variables
 --------------
 
@@ -24,7 +32,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: ansible-utorrent-server }
+         - { role: konomae.utserver }
 
 License
 -------
