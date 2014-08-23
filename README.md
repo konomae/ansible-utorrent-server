@@ -3,6 +3,8 @@ Role Name
 
 A brief description of the role goes here.
 
+[![Circle CI](https://circleci.com/gh/konomae/ansible-utorrent-server.png?style=badge)](https://circleci.com/gh/konomae/ansible-utorrent-server)
+
 Requirements
 ------------
 
