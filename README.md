@@ -34,6 +34,16 @@ Example Playbook
       roles:
          - { role: konomae.utserver }
 
+Tests
+-----
+
+```bash
+$ docker build -t utserver .
+$ docker run -d -p 8080:8080 utserver
+$ curl --user admin: http://localhost:8080/gui/
+```
+
+
 License
 -------
 
