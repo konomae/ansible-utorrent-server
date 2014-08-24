@@ -13,6 +13,8 @@ ADD . /root
 WORKDIR /root
 RUN ansible-playbook -i inventory tests.yml --syntax-check
 RUN ansible-playbook -i inventory tests.yml --connection=local -v
+RUN ansible-playbook -i inventory tests.yml --connection=local -v | \
+      grep -q 'changed=0\s*unreachable=0\s*failed=0' && exit 0 || exit 1
 
 EXPOSE 6881
 EXPOSE 8080
