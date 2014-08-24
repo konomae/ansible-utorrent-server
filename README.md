@@ -25,6 +25,8 @@ Role Variables
     utserver_install_dest: /opt
     utserver_link_src: /opt/utorrent-server-alpha-v3_3
     utserver_link_dest: /opt/utorrent-server
+    
+    utserver_webui_url: no
 
 
 Example Playbook
@@ -42,6 +44,19 @@ $ docker build -t utserver .
 $ docker run -d -p 8080:8080 utserver
 $ curl --user admin: http://localhost:8080/gui/
 ```
+
+Version History
+---------------
+
+### v1.0.1
+
+* Allow to change webui
+* ansible>=1.6
+
+
+### v1.0.0
+
+* First release
 
 
 License
