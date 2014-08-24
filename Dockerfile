@@ -4,7 +4,7 @@ RUN apt-get update
 
 # Install Ansible
 RUN apt-get install -y software-properties-common
-RUN apt-add-repository -y ppa:ansible/ansible
+RUN apt-add-repository -y ppa:ansible/ansible && apt-get update
 RUN apt-get install -y ansible
 RUN apt-get install -y python-apt
 
