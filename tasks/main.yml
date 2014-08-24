@@ -11,6 +11,14 @@
 
 - get_url: url={{ utserver_download_url }} dest={{ utserver_download_dest }}
 
-- unarchive: src={{ utserver_download_dest }} dest={{ utserver_install_dest }}
+- unarchive: src={{ utserver_download_dest }} dest={{ utserver_install_dest }} creates={{ utserver_link_src }}
 
 - file: src={{ utserver_link_src }} dest={{ utserver_link_dest }} state=link
+
+
+# install custom webui if available
+- get_url: url={{ utserver_webui_url }} dest={{ utserver_link_src }}/webui.custom.zip
+  when: utserver_webui_url
+
+- file: src={{ utserver_link_src }}/webui.custom.zip dest={{ utserver_link_src }}/webui.zip state=link force=yes
+  when: utserver_webui_url
