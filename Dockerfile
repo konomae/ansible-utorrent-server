@@ -17,5 +17,7 @@ RUN ansible-playbook -i inventory tests.yml --connection=local -v
 EXPOSE 6881
 EXPOSE 8080
 
+VOLUME ["/data"]
+
 ENTRYPOINT ["/opt/utorrent-server/utserver"]
 CMD ["-settingspath", "/opt/utorrent-server/"]
