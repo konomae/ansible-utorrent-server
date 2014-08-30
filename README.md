@@ -26,15 +26,28 @@ Role Variables
     utserver_link_src: /opt/utorrent-server-alpha-v3_3
     utserver_link_dest: /opt/utorrent-server
     
-    utserver_webui_url: no
+    # ignore if empty string
+    utserver_webui_url: ""
 
 
 Example Playbook
 ----------------
 
+Install from remote files:
+
     - hosts: servers
       roles:
          - { role: konomae.utserver }
+
+
+Or, install from local files:
+
+    - hosts: servers
+      roles:
+        - role: konomae.utserver
+          utserver_download_url: "utserver.tar.gz"
+          utserver_webui_url: "webui.zip"
+
 
 Tests
 -----
@@ -47,6 +60,12 @@ $ curl --user admin: http://localhost:8080/gui/
 
 Version History
 ---------------
+
+### v1.0.2
+
+* Allow to copy utserver.tar.zip from local machine
+* Allow to copy webui.zip from local machine
+
 
 ### v1.0.1
 
