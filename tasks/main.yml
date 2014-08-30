@@ -10,6 +10,10 @@
     - libssl1.0.0
 
 - get_url: url={{ utserver_download_url }} dest={{ utserver_download_dest }}
+  when: "utserver_download_url.startswith(('http://', 'https://'))"
+
+- copy: src={{ utserver_download_url }} dest={{ utserver_download_dest }}
+  when: "not utserver_download_url.startswith(('http://', 'https://'))"
 
 - unarchive: src={{ utserver_download_dest }} dest={{ utserver_install_dest }} creates={{ utserver_link_src }}
 

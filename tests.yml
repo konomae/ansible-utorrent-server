@@ -1,6 +1,10 @@
 ---
 - hosts: all
   vars:
+
+    # install from "files/utserver.tar.gz" if you prefer.
+    #utserver_download_url: utserver.tar.gz
+
     # old webui, found here: http://forum.utorrent.com/topic/49588-%C2%B5torrent-webui/
     utserver_webui_url: "https://sites.google.com/site/ultimasites/files/utorrent-webui.2013052820184444.zip"
   roles:
