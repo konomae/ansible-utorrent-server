@@ -8,4 +8,5 @@ utserver_install_dest: /opt
 utserver_link_src: /opt/utorrent-server-alpha-v3_3
 utserver_link_dest: /opt/utorrent-server
 
-utserver_webui_url: no
+# ignore if empty string
+utserver_webui_url: ""

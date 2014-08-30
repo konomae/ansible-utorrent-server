@@ -22,7 +22,10 @@
 
 # install custom webui if available
 - get_url: url={{ utserver_webui_url }} dest={{ utserver_link_src }}/webui.custom.zip
-  when: utserver_webui_url
+  when: "utserver_webui_url|length > 0 and utserver_webui_url.startswith(('http://', 'https://'))"
+
+- copy: src={{ utserver_webui_url }} dest={{ utserver_link_src }}/webui.custom.zip
+  when: "utserver_webui_url|length > 0 and not utserver_webui_url.startswith(('http://', 'https://'))"
 
 - file: src={{ utserver_link_src }}/webui.custom.zip dest={{ utserver_link_src }}/webui.zip state=link force=yes
-  when: utserver_webui_url
+  when: "utserver_webui_url|length > 0"
