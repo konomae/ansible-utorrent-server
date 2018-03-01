@@ -5,7 +5,7 @@ Install uTorrent Server.
 
 By default, this will install to `/opt/utorrent-server/`.
 
-[![Circle CI](https://circleci.com/gh/konomae/ansible-utorrent-server.png?style=badge)](https://circleci.com/gh/konomae/ansible-utorrent-server)
+[![CircleCI](https://circleci.com/gh/konomae/ansible-utorrent-server.svg?style=svg)](https://circleci.com/gh/konomae/ansible-utorrent-server)
 
 
 How To Install
