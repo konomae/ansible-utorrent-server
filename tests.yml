@@ -10,4 +10,4 @@
     #utserver_webui_url: webui.zip
 
   roles:
-    - { role: . }
+    - { role: '{{ playbook_dir }}' }
