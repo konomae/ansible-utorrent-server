@@ -61,6 +61,11 @@ $ curl --user admin: http://localhost:8080/gui/
 Version History
 ---------------
 
+### v1.0.3
+
+* Update test script
+
+
 ### v1.0.2
 
 * Allow to copy utserver.tar.zip from local machine
