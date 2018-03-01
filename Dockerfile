@@ -5,7 +5,7 @@ RUN apt-get update
 # Install Ansible
 RUN apt-get install -y software-properties-common
 RUN apt-add-repository -y ppa:ansible/ansible && apt-get update
-RUN apt-get install -y ansible
+RUN apt-get install -y ansible=1.7.2+dfsg-1~ubuntu14.04.1
 RUN apt-get install -y python-apt
 
 # Tests
