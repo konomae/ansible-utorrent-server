@@ -1,0 +1,13 @@
+version: 2
+jobs:
+ build:
+   machine: true
+   steps:
+     - checkout
+
+     # build the application image
+     - run: docker build -t utserver .
+
+     # deploy the image
+     - run: docker run -d -p 8080:8080 utserver; sleep 5
+     - run: "curl --retry 10 --retry-delay 5 --user admin: http://localhost:8080/gui/"
